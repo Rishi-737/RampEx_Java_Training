@@ -1,0 +1,12 @@
+Leetcode 476: Number Complement
+
+class Solution {
+    public int findComplement(int num) {
+        int ones=0;
+        while (ones<num){
+            ones= (ones<<1)|1;
+
+        }
+        return ones-num;
+        }
+    }
