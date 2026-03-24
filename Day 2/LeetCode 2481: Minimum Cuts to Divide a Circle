@@ -1,0 +1,12 @@
+LeetCode 2481: Minimum Cuts to Divide a Circle
+
+class Solution {
+    public int numberOfCuts(int n) {
+        if (n>1&&n%2!=0)
+        return n;
+        else if(n>1)
+        return n/2;
+        else 
+        return 0;
+    }
+}
