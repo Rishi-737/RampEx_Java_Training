@@ -1,0 +1,8 @@
+LeetCode 342: Power Of Four
+
+class Solution {
+    public boolean isPowerOfFour(int n) {
+        if(n<=0) return false;
+        return (n&(n-1))==0&&(n&0X55555555)!=0;
+    }
+}
