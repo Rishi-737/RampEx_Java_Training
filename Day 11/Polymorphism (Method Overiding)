@@ -1,0 +1,36 @@
+Polymorphism (Method Overiding)
+class Amazon{
+    
+    void delivery(){
+        System.out.println("product delivary");
+    }
+}
+    class StandardDelivery extends Amazon{
+        void delivery(){
+            System.out.println("Product will be delivered in 5d");
+        }
+    }
+    class ExpressDelivery extends Amazon{
+        void delivery(){
+            System.out.println("Product will be delivered in 2d");
+        }
+    }
+    class PrimeDelivery extends Amazon{
+        void delivery(){
+            System.out.println("Product will be delivered in 2hrs");
+        }
+    }
+    
+
+public class Main
+{
+	public static void main(String[] args) {
+	Amazon a;
+	a=new StandardDelivery();
+	a.delivery();
+	a=new ExpressDelivery();
+	a.delivery();
+	a=new PrimeDelivery();
+	a.delivery();
+	}
+}
