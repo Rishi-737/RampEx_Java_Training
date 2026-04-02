@@ -1,0 +1,25 @@
+Leader in Subarray
+
+public class Main
+{
+    
+	public static void main(String[] args) {
+		int[]a={16,27,4,3,5,2};
+		leader(a);
+	}
+	public static void leader(int[]a){
+	    int n=a.length;
+	    int ind=n-1;
+	    int maxlen=a[ind];
+	    for(int i=n-2;i>=0;i--){
+	        if(a[i]>maxlen){
+	            maxlen=a[i];
+	            ind--;
+	            a[ind]=a[i];
+	        }
+	    }
+	    for(int i=ind;i<n;i++){
+	        System.out.print(a[i]+" ");
+	    }
+	}
+}
